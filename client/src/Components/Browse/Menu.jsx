@@ -1,8 +1,22 @@
+import React from 'react';
+import Container from '@mui/material/Container';
+
 
 const Menu = () => {
 
   return (
-    <div>
+    <Container
+      sx={{
+        width: 300,
+        height: 300,
+        backgroundColor: 'primary.dark',
+        '&:hover': {
+          backgroundColor: 'primary.main',
+          opacity: [0.9, 0.8, 0.7],
+        },
+      }}
+    >
+    <div className='menu-container'>
       <form>
       Im looking for service for my...
       <input type='checkbox' />
@@ -39,6 +53,7 @@ const Menu = () => {
       </form>
       <button>submit</button>
     </div>
+    </ Container>
   )
 }
 

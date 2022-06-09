@@ -1,14 +1,14 @@
 import NavBar from './Components/NavBar';
-import Map from './Components/Map';
-import Menu from './Components/Menu';
+import Browse from './Components/Browse/Browse';
+
 import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <NavBar />
-      <Map />
-      <Menu />
+      <Browse />
+      
     </div>
   );
 }
