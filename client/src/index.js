@@ -1,13 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#494949", // NAVBAR AND MAIN BUTTONS
+    },
+    secondary: {
+      main: "#FAF6E9", // BACKGROUND
+    },
+    error: {
+      main: "#ECE8D9", // RED BUTTONS
+    },
+    success: {
+      main: "#ECE8D9", // success BUTTONS
+    },
+    info: {
+      main: "#FFFDF6", // CARDS
+    },
+  },
+});
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

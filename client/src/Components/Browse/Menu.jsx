@@ -9,9 +9,9 @@ const Menu = () => {
       sx={{
         width: 300,
         height: 300,
-        backgroundColor: 'primary.dark',
+        backgroundColor: 'primary',
         '&:hover': {
-          backgroundColor: 'primary.main',
+          backgroundColor: 'primary',
           opacity: [0.9, 0.8, 0.7],
         },
       }}
