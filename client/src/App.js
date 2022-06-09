@@ -1,5 +1,5 @@
 import NavBar from './Components/NavBar';
-import Browse from './Components/Browse/Browse';
+import Browse from './Components/Browse/Index';
 
 import './App.css';
 
