@@ -10,17 +10,17 @@ import {
   useTheme,
 } from "@mui/material";
 import PetsIcon from '@mui/icons-material/Pets';
-import DrawerComp from "./Drawer";
+
 
 const Navigation = () => {
   const [value, setValue] = useState();
   const theme = useTheme();
   console.log('theme: ', theme)
-  const isMatch = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
     <React.Fragment>
-      <AppBar sx={{ background: "#063970" }} position='relative'>
+      <AppBar sx={{ background: "#494949" }} position='relative'>
         <Toolbar>
           <PetsIcon sx={{ transform: "scale(1)" }} />
           {isMatch ? (
@@ -28,13 +28,13 @@ const Navigation = () => {
               <Typography sx={{ fontSize: "1rem", paddingLeft: "15px" }}>
                 Walkie Doggie
               </Typography>
-              <DrawerComp />
+          
             </>
           ) : (
             <>
               <Tabs
                 sx={{ marginLeft: "15px" }}
-                indicatorColor="primary"
+                indicatorColor="secondary"
                 textColor="inherit"
                 value={value}
                 onChange={(e, value) => setValue(value)}
