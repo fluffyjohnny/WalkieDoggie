@@ -1,15 +1,15 @@
-import NavBar from './Components/NavBar';
-import Browse from './Components/Browse/Index';
-
-import './App.css';
+import NavBar from "./Components/NavBar";
+import Browse from "./Components/Browse/Index";
+import CssBaseline from "@mui/material/CssBaseline";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className='App'>
+    <BrowserRouter>
+      <CssBaseline />
       <NavBar />
       <Browse />
-      
-    </div>
+    </BrowserRouter>
   );
 }
 
