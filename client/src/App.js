@@ -1,14 +1,20 @@
 import NavBar from "./Components/NavBar";
 import Browse from "./Components/Browse/Index";
-import CssBaseline from "@mui/material/CssBaseline";
+import { CssBaseline, Box, Container } from "@mui/material";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
       <CssBaseline />
-      <NavBar />
-      <Browse />
+      <Box backgroundColor="secondary.main" minHeight="100vh">
+        <NavBar />
+        <Container maxWidth="lg">
+          <Routes>
+            <Route path="/" element={<Browse />} />
+          </Routes>
+        </Container>
+      </Box>
     </BrowserRouter>
   );
 }
