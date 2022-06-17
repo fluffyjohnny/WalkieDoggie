@@ -88,16 +88,14 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-const pageLinks = [{ text: "Browse", route: "/" }];
+const pageLinks = [{ text: "Browse", route: "/" }, { text: "Become a sitter", route: "/sign-up" }];
 
 const authPageLinks = [
-  { text: "Cart", route: "/orders/cart" },
-  { text: "Previous Orders", route: "/orders/previous" },
+
 ];
 
 const vendorPageLinks = [
-  { text: "Current Orders", route: "/orders/vendor" },
-  { text: "Add New Dish", route: "/dishes/new" },
+  
 ];
 
 const Navigation = () => {
@@ -307,32 +305,8 @@ const Navigation = () => {
 
           <Box sx={{ flexGrow: 0, justifyContent: 'flex-end' }}>
             <Stack direction="row" alignItems="center">
-              {vendorMode 
-              // && userId 
-              && (
-                <Typography sx={{ pr: 2 }}>Vendor Mode</Typography>
-              )}
-              {!vendorMode && 
-              // userId && 
-              (
-                <Typography sx={{ pr: 2 }}>Buyer Mode</Typography>
-              )}
-              { //isVendor && 
-              (
-                <FormControlLabel
-                  label={''}
-                  control={
-                    <Android12Switch
-                      checked={vendorMode}
-                      onChange={() => {
-                        setVendorModeFromStorage();
-                      }}
-                    />
-                  }
-                />
-              )}
-              {'hello' && 
-              <Typography sx={{ mr: 2 }}>{'hello'}</Typography>}
+              {/* {'hello' && 
+              <Typography sx={{ mr: 2 }}>{'hello'}</Typography>} */}
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt="Remy Sharp" src={''} />
@@ -362,15 +336,16 @@ const Navigation = () => {
                   <div>
                     <Search>
                       <StyledInputBase
-                        placeholder="Log In"
-                        inputProps={{ 'aria-label': 'login' }}
+                        placeholder="password"
+                        inputProps={{ 'aria-label': 'password' }}
                         value={input}
                         onChange={e => setInput(e.target.value)}
                       />
                     </Search>
                     <Button
                       size="large"
-                      color="inherit"
+                      color="secondary"
+                      variant="contained"
                       onClick={e => handleLogin(e, input)}
                     >
                       Log In
